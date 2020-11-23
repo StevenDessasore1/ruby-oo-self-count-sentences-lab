@@ -2,19 +2,27 @@ require 'pry'
 
 class String
 
-  def sentence?
-    
-  end
 
-  def question?
+  def sentence?	  
 
-  end
+    self.end_with?(".")
+  end	  
 
-  def exclamation?
 
-  end
+  def question?	 
+
+  self.end_with?("?")
+  end	  
+
+
+  def exclamation?	
+
+     self.end_with?("!")
+  end	 
+
 
   def count_sentences
 
-  end
-end
+    self.split(/[.!?]+/).count
+  end	  
+end 
